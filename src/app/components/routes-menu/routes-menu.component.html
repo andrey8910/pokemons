@@ -1,0 +1,40 @@
+<div class="wrapper" [ngClass]="isDarkTheme? 'dark-theme' : 'light-theme'">
+   
+    
+   <header class="header">
+      <div class="container">
+         <div class="header__body">
+            <a routerLink="" class="header__logo">
+               <img src="../../../assets/images/pokemon-logo.png" alt="logo">
+            </a>
+            <div class="header__burger" [class.active]="burgerActive" (click)='clickBurgerActive()'>
+               <span></span>
+            </div>
+          
+            <nav class="header__menu" [class.active]="burgerActive">
+               <ul class="header__list">
+                  <li>
+                     <a routerLink="/home" routerLinkActive="active" class="header__link">home</a>
+                  </li>
+                  <li>
+                     <a routerLink="/all" routerLinkActive="active" class="header__link">pokedex</a>
+                  </li>
+                  <li style="margin-left: 150px;">
+                     <mat-icon>brightness_low</mat-icon> <mat-slide-toggle style="vertical-align: top; margin: 0 5px" (click)="toggleTheme()"></mat-slide-toggle> <mat-icon>brightness_3</mat-icon>
+                  </li>
+                 
+                
+               </ul>
+            </nav>
+         </div>
+        
+      </div>
+   </header>
+  
+   <div class="content">
+      <div class="container">
+       
+         <router-outlet></router-outlet>
+      </div>
+   </div> 
+</div>
