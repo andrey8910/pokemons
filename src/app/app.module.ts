@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {Routes, RouterModule} from '@angular/router';
 import { MaterialModule } from './material/material.module';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -9,6 +10,7 @@ import { RoutesMenuComponent } from './components/routes-menu/routes-menu.compon
 import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
 import { AllPokemonsComponent } from './components/all-pokemons/all-pokemons.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
+import { NgxOwlCarouselComponent } from './components/ngx-owl-carousel/ngx-owl-carousel.component';
 
 // определение маршрутов
 const appRoutes: Routes =[
@@ -23,13 +25,17 @@ const appRoutes: Routes =[
     AppComponent,
     RoutesMenuComponent,
     NotFoundPageComponent,
-    AllPokemonsComponent
+    AllPokemonsComponent,
+    NgxOwlCarouselComponent,
+    HomePageComponent
+    
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
